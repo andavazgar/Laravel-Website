@@ -4,7 +4,7 @@
 	<img src="{{ $author->avatar }}" alt="avatar">
 	<div class="ml-3 text-left">
 		<h5 class="font-bold">
-			<a href="/authors/{{ $author->username }}">
+			<a href="/?author={{ $author->username }}">
 				{{ $author->name }}
 			</a>
 		</h5>
