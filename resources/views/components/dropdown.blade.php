@@ -1,7 +1,7 @@
 @props(['title', 'name', 'options', 'hiddenInputs' => []])
 
 
-@section('js')
+@push('scripts')
 <script>
 	let dropdownName = "{{ $name }}";
 	let dropdown = document.getElementById(dropdownName);
@@ -16,7 +16,7 @@
 		dropdownForm.submit();
 	}
 </script>
-@endsection
+@endpush
 
 
 <form id="{{ $name . 'Form' }}">
@@ -31,4 +31,4 @@
 	<x-hidden-query-inputs :fields="$hiddenInputs" />
 </form>
 
-<x-icon name="dropdown-arrow" class="absolute pointer-events-none" style="right: 12px" />
+<x-icon name="chevron-down" class="absolute pointer-events-none" style="right: 12px" />
